@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/techcourse/tabs/cathegories"></ion-back-button>
+    </ion-buttons>
+    <ion-title>NEW NOTE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="noteForm" >
+  <ion-item>
+    <ion-label position="floating">Title</ion-label>
+ <ion-input type="text" formControlName="titleInput" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Content</ion-label>
+ <ion-input type="text" formControlName="contentInput" ></ion-input>
+  </ion-item>
+  <ion-button color="primary" class="ion-margin-top" (click)="onSubmit()">Save</ion-button>
+</form>
+</ion-content>

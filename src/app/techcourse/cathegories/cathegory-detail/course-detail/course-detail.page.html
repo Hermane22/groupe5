@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/techcourse/tabs/cathegories/cathegory-detail" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{courses.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-img [src]= "courses.imageUrl"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>{{courses.description}} </p>
+      <ion-list>
+        <ion-item [routerLink]="['./',chapter.id]" *ngFor="let chapter of courses.chapters ">
+                      <ion-label>
+                      <h2> {{chapter.title}}</h2>
+                    </ion-label>
+
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>>

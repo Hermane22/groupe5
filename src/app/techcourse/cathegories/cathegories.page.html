@@ -1,0 +1,44 @@
+<ion-header color="secondary">
+  <ion-toolbar color="secondary">
+    <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+    <ion-title class="ion-text-center">Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+        <ion-col size="12" size-sm="8" offset-sm="2">
+            <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                      {{cathegoryList[0].title}}
+                  </ion-card-title>
+                  <ion-img [src]= "cathegoryList[0].imageUrl"></ion-img>
+                </ion-card-header>
+
+                <ion-card-content>
+                  <p> {{cathegoryList[0].description}}</p>
+                  <div class="ion-text-end">
+                    <ion-button fill="clear" [routerLink]="['./',cathegoryList[0].id]" > Read More </ion-button>
+
+                  </div>
+                </ion-card-content>
+            </ion-card>
+              <ion-slides>
+                <ion-slide [routerLink]="['./',cathego.id]" detail *ngFor="let cathego of  cathegoryList ">
+                  <ion-card >
+                      <h2> {{cathego.title}}</h2>
+                      <h3>  {{cathego.courses.length}}</h3>
+
+                    </ion-card>
+
+                </ion-slide>
+
+              </ion-slides>
+
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
