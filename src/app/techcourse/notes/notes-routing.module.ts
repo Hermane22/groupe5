@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'new-note',
     loadChildren: () => import('./new-note/new-note.module').then( m => m.NewNotePageModule)
+  },
+  {
+    path: ':idNote',
+    loadChildren: () => import('./note-detail/note-detail.module').then( m => m.NoteDetailPageModule)
   }
 ];
 

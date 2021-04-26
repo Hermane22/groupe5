@@ -20,7 +20,7 @@
       <ion-list>
         <ion-item [routerLink]="['./',course.id]" *ngFor="let course of  categorie.courses">
           <ion-thumbnail slot="start">
-                      <ion-img  > {{course.imageUrl}} </ion-img>
+                      <ion-img [src]="course.imageUrl"> </ion-img>
                       </ion-thumbnail>
                       <ion-label>
                       <h2> {{course.title}}</h2>

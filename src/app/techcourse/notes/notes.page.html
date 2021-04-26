@@ -11,6 +11,29 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+<ion-grid>
+  <ion-row>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-item  *ngFor="let aff of affiche " [routerLink]="['./', affiche.indexOf(aff)]">
+          <ion-label>
+               <h2> {{aff.title}}</h2>
+                      <h3>{{aff.date}}</h3>
+          </ion-label>
+
+
+
+
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
 
 
 

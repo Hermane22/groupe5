@@ -14,7 +14,6 @@ import { NewNotePage } from './new-note.page';
     FormsModule,
     IonicModule,
     NewNotePageRoutingModule,
-    FormGroup,
     ReactiveFormsModule
   ],
   declarations: [NewNotePage]
